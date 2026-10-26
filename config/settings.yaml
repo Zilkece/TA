@@ -1,0 +1,17 @@
+collection:
+  start_date: "2025-01-01"
+  end_date: null
+  timezone: "Asia/Jakarta"
+  # X API full-archive search access is required for historical data.
+  endpoint: "https://api.x.com/2/tweets/search/all"
+  max_results: 100
+  timeout_seconds: 30
+  retry_after_429: false
+  keywords_file: "config/keywords.txt"
+
+storage:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  checkpoint_dir: "data/checkpoints"
+  raw_jsonl: "data/raw/posts_raw.jsonl"
+  processed_csv: "data/processed/posts.csv"
